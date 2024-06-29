@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dribbble.com(clone)</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --pcolor: #f8f7f4;
+      }
+      #cards_img img {
+        height: 100%;
+      }
+      #cardscontainer {
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-name: scroll;
+        animation-duration: 60s;
+      }
+      #text {
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-name: colorchange;
+        animation-duration:45s;
+      }
+      @keyframes colorchange {
+        0% {
+          background-color: rgba(255, 1, 1, 0.719);
+        }
+        20% {
+          background-color: orange;
+        }
+        40% {
+          background-color: rgb(123, 255, 0);
+        }
+        60% {
+          background-color: rgb(0, 255, 179);
+        }
+        80% {
+          background-color: rgb(0, 225, 255);
+        }
+        100% {
+          background-color: rgb(255, 0, 0);
+        }
+      }
+      @keyframes scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body class="m-0 p-0 h-screen w-screen overflow-x-hidden bg-[var(--pcolor)]">
+    <div id="main" class="h-[100%] w-[100%] bg-[var(--pcolor)]">
+      <div id="page1" class="h-auto w-[100%] bg-[var(--pcolor)]">
+        <div id="nav" class="w-[100%] flex justify-between px-[1vh] pt-[0.5vh]">
+          <div id="menu">
+            <i class="ri-menu-4-fill flex pt-3 justify-between sm:hidden"></i>
+          </div>
+          <div
+            id="left"
+            class="w-[30%] relative left-0 md:flex justify-between items-center hidden"
+          >
+            <h2>Find Talent</h2>
+            <h2>Inspiration</h2>
+            <h2>Learn Design</h2>
+            <h2>Jobs</h2>
+            <h2>Go Pro</h2>
+          </div>
+          <div id="middle" class="flex sm:w-[30%] justify-center">
+            <img
+              src="./dribbble.png"
+              alt=""
+              class="h-[3vh] sm:h-[3vh] sm:-rotate-6 relative top-3"
+            />
+          </div>
+          <div
+            id="right"
+            class="sm:w-[30%] w-[60%] flex justify-end text-[1.8vh] font-bold"
+          >
+            <button class="pr-[1vw]">Log in</button
+            ><button class="bg-black text-white rounded-full m-[0.4vw] p-[1vh]">
+              Sign up
+            </button>
+          </div>
+        </div>
+
+        <div id="content" class="h-[50%] w-screen flex flex-col items-center">
+          <div
+            id="color_changing_box_with_text"
+            class="w-screen flex justify-center"
+          >
+            <div
+              id="text"
+              class="bg-red-400 text-white font-bold mt-[2vh] inline-block p-2.5 rounded-full sm:mt-[7vh] md:mt-[10vh]"
+            >
+              Over 3 million ready-to-work creatives!
+            </div>
+          </div>
+          <div
+            id="text_2"
+            class="w-[50%] flex justify-center text-center text-[5vh] sm:text-[8vh] md:text-[10vh] mt-[2vh]"
+          >
+            The world’s destination <br />
+            for design
+          </div>
+          <div id="text_3" class="hidden md:flex">
+            Get inspired by the work of millions of top-rated designers &
+            agencies around the world.
+          </div>
+          <div id="text_4_button">
+            <button
+              class="text-white bg-black p-[1.4vh] m-[2vh] rounded-full font-bold sm:text-[2vh] text-[1.6vh]"
+            >
+              Start Hiring Today
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="page2"
+        class="w-[100vw] bg-[var(--pcolor)] flex overflow-x-hidden gap-[5vw]"
+      >
+        <div id="cardscontainer" class="h-[25%] p-2 gap-[5vw] flex shrink-0">
+          <div
+            id="cards_img"
+            class="sm:h-[40vh] h-[30vh] w-[18%] relative overflow-hidden group rounded-3xl"
+          >
+            <img
+              src="https://images.pexels.com/photos/1933873/pexels-photo-1933873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+              class="h-[100%] w-[100%] object-cover"
+            />
+            <div
+              class="text-center absolute bottom-2 bg-black text-white text-sm sm:text-2xl bg-opacity-20 w-[100%] opacity-0 duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10"
+            >
+              Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+          <!-- <div id="cards_video" class="h-[100%] w-[20%] bg-white"></div> -->
+          <div
+            id="cards_img"
+            class="sm:h-[40vh] h-[30vh] w-[18%] relative overflow-hidden group rounded-3xl"
+          >
+            <!-- <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="h-[100%] w-[100%] object-cover " > -->
+            <video
+              src="https://cdn.dribbble.com/uploads/47181/original/1e3a73a174484bef522b620c401cd00a.mp4?1685645427"
+              muted
+              autoplay
+              loop
+              height="100%"
+              width="100%"
+            ></video>
+            <div
+              class="text-center absolute bottom-2 bg-black text-white text-sm sm:text-2xl bg-opacity-20 w-[100%] opacity-0 duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10"
+            >
+              Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+          <div
+            id="cards_img"
+            class="sm:h-[40vh] h-[30vh] w-[18%] relative overflow-hidden group rounded-3xl"
+          >
+            <img
+              src="https://media.licdn.com/dms/image/D4D03AQH8CXRHAKQd6Q/profile-displayphoto-shrink_200_200/0/1693777638244?e=2147483647&v=beta&t=ePGc7C1QqUhqk5hc3fAhawpk7DF0IGkTGftGappaXaw"
+              alt=""
+              class="h-[100%] w-[100%] object-cover"
+            />
+            <div
+              class="text-center absolute bottom-2 bg-black text-white text-sm sm:text-2xl bg-opacity-20 w-[100%] opacity-0 duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10"
+            >
+              Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+          <div
+            id="cards_img"
+            class="sm:h-[40vh] h-[30vh] w-[18%] relative overflow-hidden group rounded-3xl"
+          >
+            <img
+              src="https://learnyst.s3.amazonaws.com/assets/schools/3258/resources/images/How_to_crack_NIMCET_2018_in_75_Days_7rlazh.png"
+              alt=""
+              class="h-[100%] w-[100%] object-cover"
+              class="h-[100%] w-[100%] object-cover"
+            />
+            <div
+              class="text-center absolute bottom-2 bg-black text-white text-sm sm:text-2xl bg-opacity-20 w-[100%] opacity-0 duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10"
+            >
+              Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+          <div
+            id="cards_img"
+            class="sm:h-[40vh] h-[30vh] w-[18%] relative overflow-hidden group rounded-3xl"
+          >
+            <img
+              src="https://d3fu8elvld6rb5.cloudfront.net/learnyard.com/img/fraz-team.jpg"
+              alt=""
+              class="h-[100%] w-[100%] object-cover"
+            />
+            <div
+              class="text-center absolute bottom-2 bg-black text-white text-sm sm:text-2xl bg-opacity-20 w-[100%] opacity-0 duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10"
+            >
+              Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+          <div
+            id="cards_img"
+            class="sm:h-[40vh] h-[30vh] w-[18%] relative overflow-hidden group rounded-3xl"
+          >
+            <img
+              src="https://bs-uploads.toptal.io/blackfish-uploads/talent/427843/picture/optimized/huge_c711f787694f240c7bb20e598bfdd6e8-e2b83df354d725bbf11311fddbcf3719.jpg"
+              alt=""
+              class="h-[100%] w-[100%] object-cover"
+            />
+            <div
+              class="text-center absolute bottom-2 bg-black text-white text-sm sm:text-2xl bg-opacity-20 w-[100%] opacity-0 duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10"
+            >
+              Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+          <div
+            id="cards_img"
+            class="sm:h-[40vh] h-[30vh] w-[18%] relative overflow-hidden group rounded-3xl"
+          >
+          <video
+          src="https://cdn.dribbble.com/uploads/47179/original/35d07cfebd303e05e688078015da0cc2.mp4?1685645373\"
+          muted
+          autoplay
+          loop
+          height="100%"
+          width="100%"
+        ></video>
+            <div
+              class="text-center absolute bottom-2 bg-black text-white text-sm sm:text-2xl bg-opacity-20 w-[100%] opacity-0 duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10"
+            >
+              Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+        </div>
+        <div id="cardscontainer" class="h-[25%] p-2 gap-[5vw] flex shrink-0">
+          <div
+            id="cards_img"
+            class="sm:h-[40vh] h-[30vh] w-[18%] relative overflow-hidden group rounded-3xl"
+          >
+          <video
+          src="https://cdn.dribbble.com/uploads/47181/original/1e3a73a174484bef522b620c401cd00a.mp4?1685645427"
+          muted
+          autoplay
+          loop
+          height="100%"
+          width="100%"
+        ></video>
+            <div
+              class="text-center absolute bottom-2 bg-black text-white text-sm sm:text-2xl bg-opacity-20 w-[100%] opacity-0 duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10"
+            >
+              Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+          <!-- <div id="cards_video" class="h-[100%] w-[20%] bg-white"></div> -->
+          <div
+            id="cards_img"
+            class="sm:h-[40vh] h-[30vh] w-[18%] relative overflow-hidden group rounded-3xl"
+          >
+            <!-- <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="h-[100%] w-[100%] object-cover " > -->
+            <video
+              src="https://videos.pexels.com/video-files/4482083/4482083-sd_506_960_25fps.mp4"
+              muted
+              autoplay
+              loop
+              height="100%"
+              width="100%"
+            ></video>
+            <div
+              class="text-center absolute bottom-2 bg-black text-white text-sm sm:text-2xl bg-opacity-20 w-[100%] opacity-0 duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10"
+            >
+              Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+          <div
+            id="cards_img"
+            class="sm:h-[40vh] h-[30vh] w-[18%] relative overflow-hidden group rounded-3xl"
+          >
+            <img
+              src="https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&format=webp&resize=273x340&vertical=center"
+              alt=""
+              class="h-[100%] w-[100%] object-cover"
+            />
+            <div
+              class="text-center absolute bottom-2 bg-black text-white text-sm sm:text-2xl bg-opacity-20 w-[100%] opacity-0 duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10"
+            >
+              Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+          <div
+            id="cards_img"
+            class="sm:h-[40vh] h-[30vh] w-[18%] relative overflow-hidden group rounded-3xl"
+          >
+            <img
+              src="https://cdn.dribbble.com/uploads/47172/original/d85ae8c7db2421e9a01ecac942978d4b.png?1685645079&format=webp&resize=273x340&vertical=center"
+              alt=""
+              class="h-[100%] w-[100%] object-cover"
+              class="h-[100%] w-[100%] object-cover"
+            />
+            <div
+              class="text-center absolute bottom-2 bg-black text-white text-sm sm:text-2xl bg-opacity-20 w-[100%] opacity-0 duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10"
+            >
+              Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+          <div
+            id="cards_img"
+            class="sm:h-[40vh] h-[30vh] w-[18%] relative overflow-hidden group rounded-3xl"
+          >
+            <img
+              src="https://d3fu8elvld6rb5.cloudfront.net/learnyard.com/img/fraz-team.jpg"
+              alt=""
+              class="h-[100%] w-[100%] object-cover"
+            />
+            <div
+              class="text-center absolute bottom-2 bg-black text-white text-sm sm:text-2xl bg-opacity-20 w-[100%] opacity-0 duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10"
+            >
+              Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+          <div
+            id="cards_img"
+            class="sm:h-[40vh] h-[30vh] w-[18%] relative overflow-hidden group rounded-3xl"
+          >
+            <img
+              src="https://bs-uploads.toptal.io/blackfish-uploads/talent/427843/picture/optimized/huge_c711f787694f240c7bb20e598bfdd6e8-e2b83df354d725bbf11311fddbcf3719.jpg"
+              alt=""
+              class="h-[100%] w-[100%] object-cover"
+            />
+            <div
+              class="text-center absolute bottom-2 bg-black text-white text-sm sm:text-2xl bg-opacity-20 w-[100%] opacity-0 duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10"
+            >
+              Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+          <div
+            id="cards_img"
+            class="sm:h-[40vh] h-[30vh] w-[18%] relative overflow-hidden group rounded-3xl"
+          >
+            <img
+              src="https://images.pexels.com/photos/5582599/pexels-photo-5582599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+              class="h-[100%] w-[100%] object-cover"
+            />
+            <div
+              class="text-center absolute bottom-2 bg-black text-white text-sm sm:text-2xl bg-opacity-20 w-[100%] opacity-0 duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10"
+            >
+              Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="page3" class="w-[100vw] mt-[13vh] bg-[var(--pcolor)]">
+        
+          <div class="text-center sm:text-[5vh] text-[3vh] font-extrabold">Explore Inspiring Designs</div>
+          <div id="anothercards" class="grid grid-cols-1 sm:grid-cols-3 h-[100vh] w-[100vw] gap-5 mt-[2vh] p-10 text-2xl font-bold">
+            <div class="relative group">
+              <div id="overlay" class="absolute duration-500 translate-y-10 group-hover:translate-y-0 text-center w-[100%]  opacity-0 group-hover:opacity-100 bottom-[15vh] text-white font-bold">Lorem, ipsum dolor.</div>
+              <img src="https://cdn.dribbble.com/userupload/15297532/file/original-8a123a21e6b920a5ce07ac9e08585fb1.jpg?resize=640x480&vertical=center" alt="" class="rounded-2xl">
+              <div id="lowerband" class="flex justify-between text-[2vh] sm:text-[3vh] px-10 mt-[1ch]">
+                <div class="flex gap-5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ83HdLG5hl3qcpFA6NDjfxwamoIncS1oeAfQ&s" alt="" class="h-[4.5vh] sm:h-[5vh]  rounded-[50%]"><div>Tyler Plate</div></div><div class="flex gap-5"><i class="ri-heart-2-line"></i>878 <div><i class="ri-eye-fill"></i>678</div></div>
+              </div>              
+            </div>
+            <div class="relative  group">
+              <div id="overlay" class="absolute duration-500 translate-y-10 group-hover:translate-y-0 text-center w-[100%] opacity-0 group-hover:opacity-100  bottom-[15vh]">Lorem, ipsum dolor.</div>
+              <img src="https://cdn.dribbble.com/userupload/15243264/file/original-eb527e4736c1c98e64f865d8213c6552.jpg?resize=640x480&vertical=center" alt="" class="rounded-2xl">
+              <div id="lowerband" class="flex justify-between text-[2vh] sm:text-[3vh] px-10 mt-[1ch]">
+                <div class="flex gap-5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ83HdLG5hl3qcpFA6NDjfxwamoIncS1oeAfQ&s" alt="" class="h-[4.5vh] sm:h-[5vh]  rounded-[50%]"><div>Tyler Plate</div></div><div class="flex gap-5"><i class="ri-heart-2-line"></i>878 <div><i class="ri-eye-fill"></i>678</div></div>
+              </div>    
+
+
+
+            </div>
+            <div class="relative  group">
+              <div id="overlay" class="absolute duration-500 translate-y-10 group-hover:translate-y-0 text-center w-[100%] opacity-0 group-hover:opacity-100  bottom-[15vh] text-white">Lorem, ipsum dolor.</div>
+              <img src="https://cdn.dribbble.com/userupload/15201552/file/original-986dce219d50dbf44706d693c2a9d215.jpg?resize=640x480&vertical=center" alt="" class="rounded-2xl">
+              <div id="lowerband" class="flex justify-between text-[2vh] sm:text-[3vh] px-10 mt-[1ch]">
+                <div class="flex gap-5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ83HdLG5hl3qcpFA6NDjfxwamoIncS1oeAfQ&s" alt="" class="h-[4.5vh] sm:h-[5vh]  rounded-[50%]"><div>Tyler Plate</div></div><div class="flex gap-5"><i class="ri-heart-2-line"></i>878 <div><i class="ri-eye-fill"></i>678</div></div>
+              </div>    
+
+
+
+            </div>
+            <div class="relative  group">
+              <div id="overlay" class="absolute duration-500 translate-y-10 group-hover:translate-y-0 text-center w-[100%] opacity-0 group-hover:opacity-100  bottom-[15vh]">Lorem, ipsum dolor.</div>
+              <img src="https://cdn.dribbble.com/userupload/15190751/file/original-9e19f0e0007a8104c905aaadaaf12593.jpg?resize=640x480&vertical=center" alt="" class="rounded-2xl">
+              <div id="lowerband" class="flex justify-between text-[2vh] sm:text-[3vh] px-10 mt-[1ch]">
+                <div class="flex gap-5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ83HdLG5hl3qcpFA6NDjfxwamoIncS1oeAfQ&s" alt="" class="h-[4.5vh] sm:h-[5vh]  rounded-[50%]"><div>Tyler Plate</div></div><div class="flex gap-5"><i class="ri-heart-2-line"></i>878 <div><i class="ri-eye-fill"></i>678</div></div>
+              </div>    
+
+
+
+            </div>
+            <div class="relative  group">
+              <div id="overlay" class="absolute duration-500 translate-y-10 group-hover:translate-y-0 text-center w-[100%] opacity-0 group-hover:opacity-100  bottom-[15vh] text-white">Lorem, ipsum dolor.</div>
+              <img src="https://cdn.dribbble.com/userupload/15185298/file/original-fd4c73083faa835a6f97b722400e9333.jpg?crop=253x673-2531x2381&resize=640x480&vertical=center" alt="" class="rounded-2xl">
+              <div id="lowerband" class="flex justify-between text-[2vh] sm:text-[3vh] px-10 mt-[1ch]">
+                <div class="flex gap-5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ83HdLG5hl3qcpFA6NDjfxwamoIncS1oeAfQ&s" alt="" class="h-[4.5vh] sm:h-[5vh]  rounded-[50%]"><div>Tyler Plate</div></div><div class="flex gap-5"><i class="ri-heart-2-line"></i>878 <div><i class="ri-eye-fill"></i>678</div></div>
+              </div>    
+
+
+
+            </div>
+            <div class="relative  group">
+              <div id="overlay" class="absolute duration-500 translate-y-10 group-hover:translate-y-0 text-center w-[100%] opacity-0 group-hover:opacity-100  bottom-[12vh]">Lorem, ipsum dolor.</div>
+              <img src="https://cdn.dribbble.com/userupload/15281385/file/original-f640f776da193d4ec22261abc50eca48.png?resize=640x480&vertical=center" alt="" class="rounded-2xl">
+              <div id="lowerband" class="flex justify-between text-[2vh] sm:text-[3vh] px-10 mt-[1ch]">
+                <div class="flex gap-5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ83HdLG5hl3qcpFA6NDjfxwamoIncS1oeAfQ&s" alt="" class="h-[4.5vh] sm:h-[5vh]  rounded-[50%]"><div>Tyler Plate</div></div><div class="flex gap-5"><i class="ri-heart-2-line"></i>878 <div><i class="ri-eye-fill"></i>678</div></div>
+              </div>    
+
+
+
+            </div>
+            <div class="relative  group">
+              <div id="overlay" class="absolute duration-500 translate-y-10 group-hover:translate-y-0 text-center w-[100%] opacity-0 group-hover:opacity-100 text-white  bottom-[10vh]">Lorem, ipsum dolor.</div>
+              <img src="https://cdn.dribbble.com/userupload/11973895/file/original-298803cb45251cd4255d83afd0a9584c.jpg?resize=640x480&vertical=center alt="" class="rounded-2xl">
+              <div id="lowerband" class="flex justify-between text-[2vh] sm:text-[3vh] px-10 mt-[1ch]">
+                <div class="flex gap-5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ83HdLG5hl3qcpFA6NDjfxwamoIncS1oeAfQ&s" alt="" class="h-[4.5vh] sm:h-[5vh]  rounded-[50%]"><div>Tyler Plate</div></div><div class="flex gap-5"><i class="ri-heart-2-line"></i>878 <div><i class="ri-eye-fill"></i>678</div></div>
+              </div>    
+
+
+
+            </div>
+            <div class="relative  group">
+              <div id="overlay" class="absolute duration-500 translate-y-10 group-hover:translate-y-0 text-center w-[100%] opacity-0 group-hover:opacity-100  bottom-[15vh] text-white">Lorem, ipsum dolor.</div>
+              <img src="https://cdn.dribbble.com/userupload/15184915/file/original-207ca34991c3e415e640a516464c43b4.jpg?resize=640x480&vertical=center" alt="" class="rounded-2xl">
+              <div id="lowerband" class="flex justify-between text-[2vh] sm:text-[3vh] px-10 mt-[1ch]">
+                <div class="flex gap-5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ83HdLG5hl3qcpFA6NDjfxwamoIncS1oeAfQ&s" alt="" class="h-[4.5vh] sm:h-[5vh]  rounded-[50%]"><div>Tyler Plate</div></div><div class="flex gap-5"><i class="ri-heart-2-line"></i>878 <div><i class="ri-eye-fill"></i>678</div></div>
+              </div>    
+
+
+
+            </div>
+            <div class="relative  group">
+              <div id="overlay" class="absolute duration-500 translate-y-10 group-hover:translate-y-0 text-center w-[100%] opacity-0 group-hover:opacity-100  bottom-[10vh] text-white">Lorem, ipsum dolor.</div>
+              <img src="https://cdn.dribbble.com/userupload/15226958/file/original-0cf40fd0545bbb43751d7491303c3766.png?resize=640x480&vertical=center" alt="" class="rounded-2xl">
+              <div id="lowerband" class="flex justify-between text-[2vh] sm:text-[3vh] px-10 mt-[1ch]">
+                <div class="flex gap-5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ83HdLG5hl3qcpFA6NDjfxwamoIncS1oeAfQ&s" alt="" class="h-[4.5vh] sm:h-[5vh]  rounded-[50%]"><div>Tyler Plate</div></div><div class="flex gap-5"><i class="ri-heart-2-line"></i>878 <div><i class="ri-eye-fill"></i>678</div></div>
+              </div>    
+
+
+
+            </div>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
